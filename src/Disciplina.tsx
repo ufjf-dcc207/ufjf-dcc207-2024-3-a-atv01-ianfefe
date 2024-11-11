@@ -1,10 +1,15 @@
 import "./Disciplina.css";
 
-function Disciplina() {
-  return (
+type DisciplinaProps = {
+    codigo: string,
+    nome: string
+}
+
+function Disciplina(props: DisciplinaProps) {
+    return (
     <div className="disciplina">
-      <div>DCC207</div>
-      <div>Desenvolvimento Web Front-End</div>
+      <div>{props.codigo}</div>
+      <div>{props.nome}</div>
     </div>
   );
 }
